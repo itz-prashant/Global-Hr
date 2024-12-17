@@ -13,17 +13,19 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/tour" element={<Tour />}/>
-        <Route path="/showcase" element={<Showcase />}/>
-        <Route path="/pricing-plan" element={<Pricing />}/>
-        <Route path="/about-us" element={<WhoWeAre />}/>
-        <Route path="/contact" element={<ReachUs />}/>
-        <Route path="/login" element={<WebLogin />}/>
-      </Routes>
-      <Footer />
+      <div className="mx-4 sm:mx-[5%]">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/tour" element={<Tour />}/>
+          <Route path="/showcase" element={<Showcase />}/>
+          <Route path="/pricing-plan" element={<Pricing />}/>
+          <Route path="/about-us" element={<WhoWeAre />}/>
+          <Route path="/contact" element={<ReachUs />}/>
+          <Route path="/login" element={<WebLogin />}/>
+        </Routes>
+        <Footer />
+      </div>
     </>
   )
 }
