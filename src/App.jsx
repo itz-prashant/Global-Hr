@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <div className="mx-4 sm:mx-[5%]">
+      <div>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>
