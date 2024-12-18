@@ -8,7 +8,7 @@ const Navbar = () => {
   const [handelMenu, setHandleMenu] = useState(false)
 
   return (
-    <div className='flex flex-col max-w-7xl mx-auto min-h-20 px-8'>
+    <div className='flex flex-col max-w-7xl mx-auto min-h-20 px-8 '>
       <header className={`flex items-center justify-between ${handelMenu ? "border-b-[0.5px] border-gray-200" : ""}`}>
         <img src={logo} className='max-w-36 max-h-20' alt="" />
         <nav className='hidden md:block'>
