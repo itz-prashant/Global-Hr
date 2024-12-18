@@ -6,7 +6,7 @@ import FreeTrailForm from './FreeTrailForm';
 const Footer = () => {
   return (
     <>
-      <footer className='bg-[#292e31]'>
+      <footer className='bg-[#292e31] w-full'>
 
         <div className='bg-[#292e31] grid grid-cols-1 max-w-7xl mx-auto md:grid-cols-2 lg:grid-cols-4 p-8 mt-20'>
           <div className='flex flex-col gap-6 text-center p-8'>
