@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Button from './Button'
 import MessageBox from './MessageBox'
 
-const FreeTrailForm = ({labelName, labelEmail, labelCompanyName, color, direction}) => {
-
+const FreeTrailForm = ({labelName, labelEmail, labelCompanyName, direction,color, transparent, setErrorMessageBox}) => {
+    
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [companyName, setCompanyName] = useState("")
@@ -15,30 +15,34 @@ const FreeTrailForm = ({labelName, labelEmail, labelCompanyName, color, directio
         e.preventDefault()
         if(email.length == 0 && email == ""){
             setValidation(true)
+            setErrorMessageBox(true)
         }else{
             setValidation(false)
             setShowBox(true)
             setName("")
             setEmail("")
             setCompanyName("")
+            setErrorMessageBox(false)
         }
     }
 
   return (
-    !showBox ? <form onSubmit={handleForm} className={`flex ${direction == "row" ? "flex-row" : "flex-col gap-2"}`}>
+    !showBox ? <form onSubmit={handleForm} className={`flex ${direction == "row" ? "flex-row items-baseline h-[68px] gap-4" : "flex-col gap-2"}`}>
 
-        {labelName && <label className='text-white/65'>{labelName}</label>}
-        <input type="text" placeholder='Name' value={name} onChange={(e)=> setName(e.target.value)} className='bg-transparent border border-white p-3 outline-none text-white rounded'/>
+        {labelName && <label className='text-white/65 text-sm'>{labelName}</label>}
+        <input type="text" placeholder='Name' value={name} onChange={(e)=> setName(e.target.value)} className={`${transparent == "transparent" ? "bg-transparent border border-white text-white" : "bg-white text-black/50" } px-3 h-12 outline-none rounded text-sm`}/>
 
-        {labelEmail && <label className='text-white/65'>{labelEmail}</label>}
-        <input type="text" placeholder='Email' value={email} onChange={(e)=> setEmail(e.target.value)} className='bg-transparent border border-white p-3 outline-none text-white rounded'/>
+        <div className='flex flex-col'>
+            {labelEmail && <label className='text-white/65 text-sm'>{labelEmail}</label>}
+            <input type="text" placeholder='Email' value={email} onChange={(e)=> setEmail(e.target.value)} className={`${transparent == "transparent" ? "bg-transparent border border-white text-white" : "bg-white text-black/50" } px-3 h-12 outline-none rounded text-sm`}/>
 
-        {validation && <p className={`text-xs text-red-700 font-medium`}>This field cannot be blank.</p>}
+            {validation && <p className={`text-xs text-red-700 font-medium`}>This field cannot be blank.</p>}
+        </div>
 
-        {labelCompanyName && <label className='text-white/65'>{labelCompanyName}</label>}
-        <input type="text" placeholder='Company Name' value={companyName} onChange={(e)=> setCompanyName(e.target.value)} className='bg-transparent border border-white p-3 outline-none text-white rounded'/>
+        {labelCompanyName && <label className='text-white/65 text-sm'>{labelCompanyName}</label>}
+        <input type="text" placeholder='Company Name' value={companyName} onChange={(e)=> setCompanyName(e.target.value)} className={`${transparent == "transparent" ? "bg-transparent border border-white text-white" : "bg-white text-black/50" } px-3 h-12 outline-none rounded text-sm`}/>
 
-        <Button color="blue" text="Start Free Trial"/>
+        <Button color={color} text="Start Free Trial"/>
         
     </form> : <MessageBox />
   )
