@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className={`flex items-center justify-between ${handelMenu ? "border-b-[0.5px] border-gray-200" : ""}`}>
         <img src={logo} className='max-w-36 max-h-20' alt="" />
         <nav className='hidden md:block'>
-          <ul className='flex items-center gap-6 text-black text-[15px]'>
+          <ul className='flex items-center gap-6 text-black/80 text-sm'>
             <Link to={"/"} className='hover:text-blue-600'>Home</Link>
             <Link to={"/tour"} className='hover:text-blue-600'>Tour</Link>
             <Link to={"/showcase"} className='hover:text-blue-600'>Showcase</Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
         <IoMenu size={32} onClick={()=> setHandleMenu(!handelMenu)} className='md:hidden text-gray-500 cursor-pointer'/>
       </div>
       {handelMenu && <nav className='md:hidden'>
-        <ul className='flex flex-col gap-6 text-black text-[15px] p-4'>
+        <ul className='flex flex-col gap-6 text-black/80 text-sm p-4'>
             <Link to={"/"} className='hover:text-blue-600'>Home</Link>
             <Link to={"/tour"} className='hover:text-blue-600'>Tour</Link>
             <Link to={"/showcase"} className='hover:text-blue-600'>Showcase</Link>
