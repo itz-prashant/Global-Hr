@@ -27,7 +27,7 @@ const FreeTrailForm = ({labelName, labelEmail, labelCompanyName, direction,color
     }
 
   return (
-    !showBox ? <form onSubmit={handleForm} className={`flex ${direction == "row" ? "flex-row items-baseline h-[68px] gap-4" : "flex-col gap-2"}`}>
+    !showBox ? <form onSubmit={handleForm} className={`flex ${direction == "row" ? "md:flex-row flex-col items-baseline justify-center md:flex-wrap md:h-[68px] gap-4" : "flex-col gap-2"}`}>
 
         {labelName && <label className='text-white/65 text-sm'>{labelName}</label>}
         <input type="text" placeholder='Name' value={name} onChange={(e)=> setName(e.target.value)} className={`${transparent == "transparent" ? "bg-transparent border border-white text-white" : "bg-white text-black/50" } px-3 h-12 outline-none rounded text-sm`}/>
