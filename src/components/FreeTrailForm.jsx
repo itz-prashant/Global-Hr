@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from './Button'
+import MessageBox from './MessageBox'
 
 const FreeTrailForm = ({labelName, labelEmail, labelCompanyName, color, direction}) => {
 
@@ -39,9 +40,7 @@ const FreeTrailForm = ({labelName, labelEmail, labelCompanyName, color, directio
 
         <Button color="blue" text="Start Free Trial"/>
         
-    </form> : <div className='bg-green-100 p-5 rounded'>
-        <p className='text-green-600'>Thank you for your request. Our support team will get back to you soon.</p>
-    </div>
+    </form> : <MessageBox />
   )
 }
 
