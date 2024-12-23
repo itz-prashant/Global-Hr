@@ -41,7 +41,7 @@ const Footer = () => {
 
           <div className='flex flex-col gap-6 p-8'>
               <h1 className='text-center text-xl text-white pb-3 border-b-[0.5px] border-gray-600'>Free Trial Sign Up</h1>
-              <FreeTrailForm labelName="Name" labelEmail="Email Address" labelCompanyName="Company Name" color="blue" direction="col"/>
+              <FreeTrailForm labelName="Name" labelEmail="Email Address" labelCompanyName="Company Name"  direction="col"/>
           </div>
 
           <div className='flex flex-col gap-6 text-center p-8'>
