@@ -22,7 +22,7 @@ const Home = () => {
           {errorMessageBox && <div className='bg-red-100 p-5 rounded'>
           <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
           </div>}
-          <FreeTrailForm direction="row" transparent="white" color="yellow" setErrorMessageBox={setErrorMessageBox}/>
+          <FreeTrailForm direction="row" transparent="white" background="yellow" setErrorMessageBox={setErrorMessageBox}/>
         </div>
       </div>
       
@@ -66,7 +66,7 @@ const Home = () => {
           <h1 className='sm:text-3xl text-2xl mb-3 text-white text-center font-medium'>Powerful yet simple</h1>
           <div className='flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-2 md:gap-6'>
             <div>
-              <img className='w-[360px] md:w-400 lg:w-[450px]' src={featureImg} alt="" />
+              <img className='w-[360px] md:w-400 lg:w-[450px]' src={img2} alt="" />
             </div>
             <div className='flex flex-col gap-5 max-w-96'>
                 <div className='flex flex-row items-start gap-4'>
@@ -93,6 +93,17 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='w-full p-10 flex items-center justify-center'>
+            <div className='max-w-7xl mx-auto flex flex-col items-center gap-5'>
+              <h1 className='sm:text-3xl text-xl text-black/70 text-center font-medium'>Ready to get started?</h1>
+              <p className='text-xs md:mb-10 text-black/60 mb-3 text-center'>Try our free 14 day trial and see if our product is right for your business. No credit card, no hassle!</p>
+              {errorMessageBox && <div className='bg-red-100 p-5 rounded w-fit'>
+                <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
+              </div>}
+              <FreeTrailForm labelName="Name" labelEmail="Email Address" labelCompanyName="Company Name" background="blue" color="black"  direction="row" transparent="white" setErrorMessageBox={setErrorMessageBox}/>
+            </div>
       </section>
     </>
   )
