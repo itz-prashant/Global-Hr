@@ -20,7 +20,7 @@ const Tour = () => {
         </div>
       </div>
 
-      <section className='w-full p-10 flex items-center justify-center'>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
         <div className='max-w-7xl mx-auto md:w-full w-80 sm:w-[450px] flex flex-col md:flex-row gap-12 md:gap-8'>
             <div className='flex flex-row items-start gap-5'>
               <div className='text-[#045089]'><FaWandMagicSparkles size={32}/></div>
@@ -36,6 +36,16 @@ const Tour = () => {
                 <p className='text-black/70 text-sm'>Build an HR system that meets your needs by customising pages, fields, approval process, work patterns, forms, performance reviews, reports and more.</p>
               </div>
             </div>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 bg-[#dddddd] flex items-center justify-center'>
+        <div className='max-w-7xl mx-auto bg-red-100'>
+        <iframe className='sm:w-[500px] sm:h-72'
+            src="https://www.youtube.com/embed/iEoDbPLqFsU"
+            title="YouTube video"
+            frameBorder="0"
+            allowFullScreen
+            ></iframe>
         </div>
       </section>
     </>

@@ -24,7 +24,7 @@ const Navbar = () => {
         </nav>
         <IoMenu size={32} onClick={()=> setHandleMenu(!handelMenu)} className='md:hidden text-gray-500 cursor-pointer'/>
       </div>
-      {handelMenu && <nav className='md:hidden'>
+      {handelMenu && <nav className='md:hidden mt-20'>
         <ul className='flex flex-col gap-6 text-black/80 text-sm p-4'>
             <Link to={"/"} className='hover:text-blue-600'>Home</Link>
             <Link to={"/tour"} className='hover:text-blue-600'>Tour</Link>
