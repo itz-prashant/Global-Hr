@@ -98,6 +98,14 @@ const Tour = () => {
             </div>
         </div>
       </section>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+        <div className='max-w-7xl mx-auto flex md:flex-row flex-col items-center justify-between gap-4'>
+          <h1 className='text-[#045089] md:text-2xl text-xl text-center font-medium'>Is Global HR right for your Organisation? Buy it now.</h1>
+          <Link to={"/pricing-plan"}>
+            <button className='py-2 px-10 border border-[#045089] text-[#045089] rounded-full text-lg hover:bg-[#045089] hover:text-white transition-all duration-500'>Pricing</button>
+          </Link>
+        </div>
+      </section>
     </>
   )
 }
