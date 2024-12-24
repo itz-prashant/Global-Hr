@@ -6,6 +6,7 @@ import tourImg1 from '../assets/tour-img1.png'
 import tourImg2 from '../assets/tour-img2.png'
 import tourImg3 from '../assets/tour-img3.png'
 import tourImg4 from '../assets/tour-img4.png'
+import tourImg5 from '../assets/tour-img5.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -147,6 +148,24 @@ const Tour = () => {
                 <br />
                 Global HR’s integrated Time module helps streamline every aspect of time recording, from set up and distribution of timesheets to authorisation and reporting.
                 </p>
+            </div>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 flex items-center bg-[#28b779] justify-center'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
+            <div className='w-1/2'>
+              <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
+              Improve Recruitment
+              </h3>
+              <p className=' text-white text-sm'>
+              In-recruiting helps support your complete recruitment process, from posting the latest job vacancies, through applicant tracking, to making the final job offer.
+                <br />
+                <br />
+                It connects you to the leading free job boards, helps you capitalise on social media, and streamlines candidate selection, so you can find the people you need faster and more effectively.
+              </p>
+            </div>
+            <div className='w-1/2 flex justify-center items-start'>
+              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg5} alt="" />
             </div>
         </div>
       </section>
