@@ -5,6 +5,7 @@ import tourBanner from '../assets/tourBanner.jpg'
 import tourImg1 from '../assets/tour-img1.png'
 import tourImg2 from '../assets/tour-img2.png'
 import tourImg3 from '../assets/tour-img3.png'
+import tourImg4 from '../assets/tour-img4.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -128,6 +129,24 @@ const Tour = () => {
             </div>
             <div className='w-1/2 flex justify-center items-start'>
               <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg3} alt="" />
+            </div>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-5'>
+            <div className='w-1/2 flex justify-center items-start'>
+              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg4} alt="" />
+            </div>
+            <div className='w-1/2'>
+              <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+              Make time tracking a breeze
+              </h3>
+              <p className=' text-black/70 text-sm'>
+              For many organisations, timesheets are an essential business tool, helping to inform resourcing and drive billing. However, they can take up way too much of everyone’s time.
+                <br />
+                <br />
+                Global HR’s integrated Time module helps streamline every aspect of time recording, from set up and distribution of timesheets to authorisation and reporting.
+                </p>
             </div>
         </div>
       </section>
