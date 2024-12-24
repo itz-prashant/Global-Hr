@@ -1,4 +1,7 @@
 import React from 'react'
+import { IoMdGitCompare } from "react-icons/io";
+import { FaRandom, FaQuestionCircle } from "react-icons/fa";
+import { MdGroups } from "react-icons/md";
 import showcaseBanner from '../assets/showcase-banner.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
@@ -17,6 +20,42 @@ const Showcase = () => {
           </div>
         </div>
       </div>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+          <div className='max-w-7xl mx-auto md:w-full w-96 sm:w-[450px] flex flex-col gap-4'>
+              <h1 className='sm:text-3xl text-xl text-black/65 text-center font-medium'>Offering one stop HR solution for small and medium businesses.</h1>
+              <p className='text-[15px] text-black/65 md:mb-10 mb-5 text-center'>Customize Global HR to suit your needs and reflect your brand.</p>
+              <div className='grid md:grid-cols-2 grid-cols-1 gap-5 justify-between'>
+              <div className='flex flex-row items-start gap-5'>
+                <div className='text-[#045089]'><IoMdGitCompare size={32}/></div>
+                  <div className='flex flex-col gap-2'>
+                      <h3 className='text-2xl font-medium text-black/70'>System Implementation</h3>
+                      <p className=' text-black/70 text-sm'>Our experts will ensure People is up and running smoothly for your business from day one, so you can start making impact right away.</p>
+                  </div>
+                </div>
+                <div className='flex flex-row items-start gap-5'>
+                  <div className='text-[#045089]'><FaRandom size={32}/></div>
+                  <div className='flex flex-col gap-2'>
+                    <h3 className='text-2xl font-medium text-black/70'>Free Switching Service</h3>
+                    <p className='text-black/70 text-sm'>Our Free Switching Service makes it easy to migrate your HR data from your old system over to People, without any added hassle.</p>
+                  </div>
+                </div>
+                <div className='flex flex-row items-start gap-5'>
+                  <div className='text-[#045089]'><MdGroups size={36}/></div>
+                  <div className='flex flex-col gap-2'>
+                      <h3 className='text-2xl font-medium text-black/70'>Online or On-Site Training</h3>
+                      <p className=' text-black/70 text-sm'>If you want to get your whole workforce up to speed with People at the same time, our experts can deliver training for your workforce either online or on-site.</p>
+                  </div>
+                </div>
+                <div className='flex flex-row items-start gap-5'>
+                  <div className='text-[#045089]'><FaQuestionCircle size={36}/></div>
+                  <div className='flex flex-col gap-2'>
+                    <h3 className='text-2xl font-medium text-black/70'>Full service support desk</h3>
+                    <p className='text-black/70 text-sm'>Our office hours (9am – 5pm) make it easy to find instant help, even if you have offices outside the UK.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </section>
     </>
   )
 }
