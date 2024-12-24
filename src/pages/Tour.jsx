@@ -4,6 +4,7 @@ import { FaCogs } from "react-icons/fa";
 import tourBanner from '../assets/tourBanner.jpg'
 import tourImg1 from '../assets/tour-img1.png'
 import tourImg2 from '../assets/tour-img2.png'
+import tourImg3 from '../assets/tour-img3.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -77,7 +78,7 @@ const Tour = () => {
       <section className='w-full sm:p-10 p-5 bg-[#f2672e] flex items-center justify-center'>
         <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-5'>
             <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg1} alt="" />
+              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg2} alt="" />
             </div>
             <div className='w-1/2'>
               <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
@@ -104,6 +105,30 @@ const Tour = () => {
           <Link to={"/pricing-plan"}>
             <button className='py-2 px-10 border border-[#045089] text-[#045089] rounded-full text-lg hover:bg-[#045089] hover:text-white transition-all duration-500'>Pricing</button>
           </Link>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 flex items-center bg-[#28a9e3] justify-center'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
+            <div className='w-1/2'>
+              <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
+              Streamline performance reviews
+              </h3>
+              <p className=' text-white text-sm'>
+              When it comes to performance management, whether your employees have an annual appraisal, a regular assessment journal or participate in a 360˚ review , Global HR will facilitate the entire process enabling employees and their managers to record the details online.
+                <br />
+                <br />
+                With prompts for completion and integration with your competency frameworks and organisational goals Global HR will guide each person through the process and help manage outcomes that affect ongoing development or impact pay.
+                <br />
+                <br />
+                Easily manage any kind of performance review, from straight-forward yearly appraisals to multi-stage reviews throughout the year.
+                <br />
+                <br />
+                You’ll have the freedom to set up the forms you need – and choose who should be involved in each step of your process. It’s an integrated, easy-to-manage, and much more satisfying approach for all of your employees.
+                </p>
+            </div>
+            <div className='w-1/2 flex justify-center items-start'>
+              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg3} alt="" />
+            </div>
         </div>
       </section>
     </>
