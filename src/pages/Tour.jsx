@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaWandMagicSparkles } from "react-icons/fa6";
+import { FaCogs } from "react-icons/fa";
 import tourBanner from '../assets/tourBanner.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
@@ -17,6 +19,25 @@ const Tour = () => {
           </div>
         </div>
       </div>
+
+      <section className='w-full p-10 flex items-center justify-center'>
+        <div className='max-w-7xl mx-auto md:w-full w-80 sm:w-[450px] flex flex-col md:flex-row gap-12 md:gap-8'>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='text-[#045089]'><FaWandMagicSparkles size={32}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/70'>Access Anytime Anywhere</h3>
+                <p className=' text-black/70 text-sm'>Because Global HR is hosted online, you and your employees can access Global HR 24/7 via a PC, Mac, tablet, smartphone or our dedicated iPhone app.</p>
+              </div>
+            </div>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='text-[#045089]'><FaCogs size={36}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/70'>Its Flexible</h3>
+                <p className='text-black/70 text-sm'>Build an HR system that meets your needs by customising pages, fields, approval process, work patterns, forms, performance reviews, reports and more.</p>
+              </div>
+            </div>
+        </div>
+      </section>
     </>
   )
 }
