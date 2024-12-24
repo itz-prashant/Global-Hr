@@ -3,6 +3,7 @@ import { FaWandMagicSparkles } from "react-icons/fa6";
 import { FaCogs } from "react-icons/fa";
 import tourBanner from '../assets/tourBanner.jpg'
 import tourImg1 from '../assets/tour-img1.png'
+import tourImg2 from '../assets/tour-img2.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -52,7 +53,7 @@ const Tour = () => {
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
         <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
             <div className='w-1/2'>
-              <h3 className='text-2xl font-medium text-black/70 mb-3'>
+              <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
               Save time, work smarter
               </h3>
               <p className=' text-black/70 text-sm'>
@@ -70,6 +71,30 @@ const Tour = () => {
             </div>
             <div className='w-1/2 flex justify-center items-start'>
               <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg1} alt="" />
+            </div>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 bg-[#f2672e] flex items-center justify-center'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-5'>
+            <div className='w-1/2 flex justify-center items-start'>
+              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg1} alt="" />
+            </div>
+            <div className='w-1/2'>
+              <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
+              Manage Absence/Holiday the Easy Way
+              </h3>
+              <p className=' text-white text-sm'>
+              Do you employ staff on a part-time basis? Do you provide flexible working, have staff on varying terms and conditions or working outside of the country?
+                <br />
+                <br />
+                There is a lot more to managing absence and holidays these days, but the good news is that Global HR can take care of the complexities and free up time and resource to facilitate strategic HR.
+                <br />
+                <br />
+                Global HR’s fully integrated absence module makes it simpler to manage absences, and generate the reports your business needs.
+                <br />
+                <br />
+                You’ll benefit from greater visibility over sicknesses, automatic calculation of holiday entitlements, smoother approval processes, automatic alerts and a host of other smart features that will save you time and put you in control.
+                </p>
             </div>
         </div>
       </section>
