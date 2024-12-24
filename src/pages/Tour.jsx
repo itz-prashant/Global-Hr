@@ -7,6 +7,7 @@ import tourImg2 from '../assets/tour-img2.png'
 import tourImg3 from '../assets/tour-img3.png'
 import tourImg4 from '../assets/tour-img4.png'
 import tourImg5 from '../assets/tour-img5.png'
+import atAGlance from '../assets/At-a-glance.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -54,7 +55,7 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2'>
               <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
               Save time, work smarter
@@ -73,14 +74,14 @@ const Tour = () => {
               </p>
             </div>
             <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg1} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg1} alt="" />
             </div>
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 bg-[#f2672e] flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-5'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg2} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg2} alt="" />
             </div>
             <div className='w-1/2'>
               <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
@@ -110,7 +111,7 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center bg-[#28a9e3] justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2'>
               <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
               Streamline performance reviews
@@ -129,14 +130,14 @@ const Tour = () => {
                 </p>
             </div>
             <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg3} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg3} alt="" />
             </div>
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-5'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg4} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg4} alt="" />
             </div>
             <div className='w-1/2'>
               <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
@@ -152,7 +153,7 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center bg-[#28b779] justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2'>
               <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
               Improve Recruitment
@@ -165,7 +166,40 @@ const Tour = () => {
               </p>
             </div>
             <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg5} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg5} alt="" />
+            </div>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+        <div className='max-w-7xl md:w-full w-[450px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14'>
+            <div className='flex justify-center items-start'>
+              <img className='w-60 md:w-72 lg:w-[470px]' src={atAGlance} alt="" />
+            </div>
+            <div className='flex flex-grow flex-col'>
+              <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+              At a glance
+              </h3>
+              <p className='text-black/70 text-sm'>
+              Global HR solutions support every aspect of your HR strategy from recruitment and on boarding right through to leaves, attendance, talent, payment and reward. Unite, integrate and optimise all of your people processes and maximise the success of your employees.
+                <br />
+                <br />
+                Global HR is our fully configurable and powerful HR and talent management system. Browser based, deployed on premise or in the cloud and integrated with payroll or stand alone, it offers a range of modules to suit your every need.
+                <br />
+                <br />
+                At the heart of the HR system is the ability to manage all of your key people information in one place, including:
+                </p>
+                <ul className='text-black/70 text-sm ml-10 flex flex-col gap-2 mt-3 list-disc'>
+                  <li>Personal details – including diversity, work permits, employment checks etc</li>
+                  <li>Job and salary history – including multi-post and multi-currency capability</li>
+                  <li>Employment details – contracts and T&Cs</li>
+                  <li>Disciplinary and grievance</li>
+                  <li>Skills and competencies – linked with training and performance management</li>
+                  <li>Absence and holidays – work patterns, part-time calculations, holiday rules, TOIL, flexitime</li>
+                  <li>Benefit, Overtime and fleet management</li>
+                  <li>Salary modelling</li>
+                  <li>Auto-enrolment process management</li>
+                  <li>Flexible organisation structures</li>
+                </ul>
             </div>
         </div>
       </section>

@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
             </div>
             <div>
-              <img className='w-[360px] md:w-420 lg:w-[470px]' src={featureImg} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={featureImg} alt="" />
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ const Home = () => {
           <h1 className='sm:text-3xl text-2xl mb-3 text-white text-center font-medium'>Powerful yet simple</h1>
           <div className='flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-2 md:gap-6'>
             <div>
-              <img className='w-[360px] md:w-400 lg:w-[450px]' src={img2} alt="" />
+              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={img2} alt="" />
             </div>
             <div className='flex flex-col gap-5 max-w-96'>
                 <div className='flex flex-row items-start gap-4'>
