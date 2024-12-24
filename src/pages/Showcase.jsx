@@ -5,6 +5,8 @@ import { MdGroups } from "react-icons/md";
 import showcaseBanner from '../assets/showcase-banner.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
+import cardData from '../utils/data';
+import CenterCard from '../components/centerCard';
 
 const Showcase = () => {
   return (
@@ -53,6 +55,24 @@ const Showcase = () => {
                     <p className='text-black/70 text-sm'>Our office hours (9am – 5pm) make it easy to find instant help, even if you have offices outside the UK.</p>
                   </div>
                 </div>
+              </div>
+          </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+          <div className='max-w-7xl mx-auto md:w-full w-[400px] sm:w-[500px] flex flex-col items-center gap-4'>
+              <h1 className='sm:text-3xl text-xl text-black/65 text-center font-medium'>Work Smarter, Work Better.</h1>
+              <p className='text-[15px] text-black/65 md:mb-10 mb-5 '>
+                GlobalHR is a cloud-based Human Resources soluton that provides businesses with an easy way to arrange their day-to-day HR needs.
+                <br />
+                <br />
+                We understand that for many companies, managing their HR with spreadsheets can sometimes get in the way of the important stuff, like growing their business.
+                </p>
+              <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-evenly grid-cols-1 gap-6'> 
+                  {
+                    cardData.map((data)=>(
+                      <CenterCard key={data.name} image={data.image} name={data.name}/>
+                    ))
+                  }
               </div>
           </div>
       </section>

@@ -95,7 +95,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='w-full p-10 flex items-center justify-center'>
+      <section className='w-full p-10 flex items-center justify-center mb-10 mt-10'>
             <div className='max-w-7xl mx-auto flex flex-col items-center gap-5'>
               <h1 className='sm:text-3xl text-xl text-black/70 text-center font-medium'>Ready to get started?</h1>
               <p className='text-xs md:mb-10 text-black/60 mb-3 text-center'>Try our free 14 day trial and see if our product is right for your business. No credit card, no hassle!</p>
