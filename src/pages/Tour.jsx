@@ -2,6 +2,7 @@ import React from 'react'
 import { FaWandMagicSparkles } from "react-icons/fa6";
 import { FaCogs } from "react-icons/fa";
 import tourBanner from '../assets/tourBanner.jpg'
+import tourImg1 from '../assets/tour-img1.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 
@@ -39,13 +40,37 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 bg-[#dddddd] flex items-center justify-center'>
-        <div className='max-w-7xl mx-auto bg-red-100'>
+        <div className='max-w-7xl mx-auto'>
         <iframe className='sm:w-[500px] sm:h-72'
             src="https://www.youtube.com/embed/iEoDbPLqFsU"
             title="YouTube video"
             frameBorder="0"
             allowFullScreen
             ></iframe>
+        </div>
+      </section>
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-5'>
+            <div className='w-1/2'>
+              <h3 className='text-2xl font-medium text-black/70 mb-3'>
+              Save time, work smarter
+              </h3>
+              <p className=' text-black/70 text-sm'>
+                Global HR is a leading author of integrated business management software. We combine our innovative software with practical knowledge and experience to deliver you an HR & payroll solution that’s exactly right for your business and your people. 
+                <br />
+                <br />
+                There’s no need to start from scratch, our solutions offer standard functionality that has been developed over many years of best practice. Combined with powerful workflow tools and the ability to configure to your needs, HR solutions from Access deliver unparalleled results.
+                <br />
+                <br />
+                The People module is the powerhouse of your HR operations. It sits at the heart of your Global HR, providing everything needed to make HR management simpler and more effective.
+                <br />
+                <br />
+                With embedded workflow, automatic alerts, advanced security and easy configuration options, the system reflects our experience of working with companies, large and small, to design HR systems that really work.
+              </p>
+            </div>
+            <div className='w-1/2 flex justify-center items-start'>
+              <img className='w-[360px] md:w-420 lg:w-[400px]' src={tourImg1} alt="" />
+            </div>
         </div>
       </section>
     </>
