@@ -4,6 +4,8 @@ import whoWeAre from '../assets/whoWeAreBanner.jpg'
 import whoImg1 from '../assets/who-img1.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
+import Accordian from '../components/Accordian';
+import { accordianDatas } from '../utils/data';
 
 const WhoWeAre = () => {
   return (
@@ -94,6 +96,20 @@ const WhoWeAre = () => {
           </div>
         </div>
       </section>
+
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+        <div className='max-w-7xl mx-auto md:w-full w-96 sm:w-[450px] flex flex-col gap-4'>
+          <h1 className='sm:text-3xl text-xl text-black/65 text-center font-medium'>Why Global HR</h1>
+          <p className='text-[15px] text-black/65 md:mb-10 mb-5 text-center'>Global HR is a web based platform that manages employee data and the main processes they are involved in. It stores personal data, roles and competencies providing the necessary features to handle performance evaluations and corporate learning management.</p>
+          <div className='flex flex-col gap-3'>
+            {
+              accordianDatas.map((data,index)=>(
+                <Accordian key={data.title} data={data} index={index}/>
+              ))
+            }
+          </div>
+        </div>
+      </section>      
     </>
   )
 }

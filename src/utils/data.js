@@ -1,3 +1,6 @@
+import { FaRegCheckCircle } from "react-icons/fa";
+
+
 import gh0 from '../assets/gh_0.png';
 import gh1 from '../assets/gh_1.png';
 import gh2 from '../assets/gh_2.png';
@@ -81,5 +84,52 @@ const cardData = [
   { image: gh38, name: "Security Manager" },
   { image: gh39, name: "Profile and Permissions" },
 ];
+
+export const accordianDatas = [
+  {
+    id: 1,
+    title: "Qyality",
+    desccription: "We believe that the quality of the service our clients receive is a key ingredient of our overall offering. The quality of service begins with the stability and reliability of our software solutions and continues through to our consultancy and our help desk. We guarantee a 48 hour response time to our customers queries and access to a second level specialist. Our extremely high level of customer retention and satisfaction are a testament to our commitment to our top quality service.",
+    isOpen: true
+  },
+  {
+    id: 2,
+    title: "Completeness",
+    desccription: "Global HR offers a complete suite of tools to manage all HR processes, that can be purchased and used independently and are able to communicate perfectly with each other and with other software.",
+    list:{
+      list1: "Global HR Recruiting to handle the entire recruiting process.",
+      list2: "Global HR Employees to manage employees data.",
+      list3: "Global HR Learning to organise the training process.",
+      list4: "Global HR Performance to monitor all evaluations.",
+      para1: "The feature set of our HRM software adapts to the needs of both small businesses and large, complex multinationals.",
+      para2: "Delivered through the Internet. No Software to install and no IT involvement."
+    },
+    isOpen: false
+  },
+  {
+    id: 3,
+    title: "Customizatio",
+    desccription: "Global HR’s HRM SaaS solution is not just about having a web based interface. We have engineered our services to enable our customers to independently make any change they want: create new fields, add items to list, customise the graphic layout and much more.",
+    isOpen: false
+  },
+  {
+    id: 4,
+    title: "Security and Uptim",
+    desccription: "Our average uptime has been 99.997%. We directly engineer and maintain our multiply redundant infrastructure and this is what enables us to reach these industry leading results. Security is built into our products at both the infrastructure and application layers ensuring compliance of the strictest regulatory standards and enabling ne grained data access control for our users.",
+    isOpen: false
+  },
+  {
+    id: 5,
+    title: "Integration",
+    desccription: "Global HR is an integrated talent management platform that enables organisations to manage HR processes from the Career site to performance evaluation. Attract, search, screen, interview, hire, promote, assess, train and evaluate all in one single integrated environment.",
+    isOpen: false
+  },
+  {
+    id: 6,
+    title: "Simplicity",
+    desccription: "We believe that complex problems can be handled in a clean and simple way. Global HR is built around this principle ensuring that our users are up and running as quickly as possible and maximising the adoption of our solutions in the organisation.",
+    isOpen: false
+  },
+]
 
 export default cardData;
