@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaWandMagicSparkles } from "react-icons/fa6";
 import whoWeAre from '../assets/whoWeAreBanner.jpg'
 import whoImg1 from '../assets/who-img1.jpg'
 import Button from '../components/Button'
@@ -40,6 +41,56 @@ const WhoWeAre = () => {
           </div>
           <div className='w-1/2 flex justify-center items-start'>
             <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={whoImg1} alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center bg-[#cccccc]'>
+        <div className='max-w-7xl mx-auto md:w-full w-96 sm:w-[450px] flex flex-col gap-8'>
+          <h1 className='sm:text-4xl text-3xl text-black/65 text-left font-medium'>What we think</h1>
+          <div className='grid md:grid-cols-2 grid-cols-1 gap-8 justify-between'>
+            <div className='flex flex-row items-start gap-3'>
+              <div className='bg-[#045089] h-16 w-16 flex-shrink-0 flex items-center justify-center rounded-full text-white'><FaWandMagicSparkles size={30}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/65'>HR SHOULD BE A STRATEGIC PART OF BUSINESS</h3>
+                <p className=' text-black/65 text-sm'>HR has the power to solve or improve 95% of business issues. That’s why we believe HR professionals should be considered strategic business partners, instead of disconnected paper-pushers.</p>
+              </div>
+            </div>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='bg-[#045089] h-16 w-16 flex-shrink-0 flex items-center justify-center rounded-full text-white'><FaWandMagicSparkles size={30}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/65'>HR SHOULD BE FLEXIBLE</h3>
+                <p className='text-black/65 text-sm'>We believe HR processes should be flexible enough to cater for the demands of an ever-growing workforce – and that means scalable technology designed for a modern age of mobile technology.</p>
+              </div>
+            </div>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='bg-[#045089] h-16 w-16 flex-shrink-0 flex items-center justify-center rounded-full text-white'><FaWandMagicSparkles size={36}/></div>
+              <div className='flex flex-col gap-2'>
+                  <h3 className='text-2xl font-medium text-black/65'>HR SHOULD BE EXPERT-LED</h3>
+                  <p className=' text-black/65 text-sm'>Human Resources is constantly buffeted with red tape and legislation changes. In our experience, the best HR professionals are those who continue to develop their industry knowledge and expertise..</p>
+              </div>
+            </div>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='bg-[#045089] h-16 w-16 flex-shrink-0 flex items-center justify-center rounded-full text-white'><FaWandMagicSparkles size={36}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/65'>HR SHOULD BE RESOURCEFUL</h3>
+                <p className='text-black/65 text-sm'>Great HR departments should be a company resource – not a drain on company resources. That’s why we developed our HR software to be affordable and easy-to-use with no need for internal I.T. support.</p>
+              </div>
+            </div>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='bg-[#045089] h-16 w-16 flex-shrink-0 flex items-center justify-center rounded-full text-white'><FaWandMagicSparkles size={36}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/65'>HR SHOULD BE FUN</h3>
+                <p className='text-black/65 text-sm'>Many people see Human Resources as a dull, admin-heavy industry. We think otherwise. Just because HR professionals have a tough job to do, why shouldn’t they find a way to have fun doing it?</p>
+              </div>
+            </div>
+            <div className='flex flex-row items-start gap-5'>
+              <div className='bg-[#045089] h-16 w-16 flex-shrink-0 flex items-center justify-center rounded-full text-white'><FaWandMagicSparkles size={36}/></div>
+              <div className='flex flex-col gap-2'>
+                <h3 className='text-2xl font-medium text-black/65'>HR SHOULD BE PEOPLE-FOCUSED</h3>
+                <p className='text-black/65 text-sm'>Human Resources would not exist if your company did not employ people. That’s why we believe HR should focus less on time-consuming paperwork, and focus more on the people that make your company tick.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
