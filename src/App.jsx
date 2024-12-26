@@ -10,6 +10,7 @@ import ReachUs from './pages/ReachUs'
 import WebLogin from './pages/WebLogin'
 import logIn from './assets/log-in.png'
 import register from './assets/Register.png'
+import ScroolToTop from "./components/ScroolToTop"
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/login" element={<WebLogin />}/>
         </Routes>
         <Footer />
+        <ScroolToTop />
       </div>
     </>
   )
