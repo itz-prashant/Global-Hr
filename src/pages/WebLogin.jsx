@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaUser } from "react-icons/fa";
 import { IoKeySharp } from "react-icons/io5";
 import { Link } from 'react-router-dom';
@@ -11,6 +11,10 @@ const WebLogin = () => {
   const handleForm = (e)=>{
     e.preventDefault()
   }
+
+  useEffect(()=>{
+      window.scrollTo(0,0)
+    },[])
 
   return (
     <div className='w-full bg-[#666666] mt-20 flex items-center justify-center'>

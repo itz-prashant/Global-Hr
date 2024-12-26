@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import pricingBanner from '../assets/pricingBanner.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
@@ -9,6 +9,10 @@ import FreeTrailForm from '../components/FreeTrailForm'
 const Pricing = () => {
 
   const [errorMessageBox, setErrorMessageBox] = useState(false)
+
+  useEffect(()=>{
+      window.scrollTo(0,0)
+    },[])
 
   return (
     <>

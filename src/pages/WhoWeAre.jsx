@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaWandMagicSparkles } from "react-icons/fa6";
 import whoWeAre from '../assets/whoWeAreBanner.jpg'
 import whoImg1 from '../assets/who-img1.jpg'
@@ -8,6 +8,11 @@ import Accordian from '../components/Accordian';
 import { accordianDatas } from '../utils/data';
 
 const WhoWeAre = () => {
+
+  useEffect(()=>{
+      window.scrollTo(0,0)
+    },[])
+
   return (
     <>
       <div className="w-full mt-20 bg-cover bg-center md:h-[80vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${whoWeAre})`}}>

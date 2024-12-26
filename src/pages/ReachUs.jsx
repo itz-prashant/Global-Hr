@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ImRoad } from "react-icons/im";
 import { IoIosLock } from "react-icons/io";
 import { FaHeadset } from "react-icons/fa6";
@@ -79,6 +79,9 @@ const ReachUs = () => {
       }
     }
 
+    useEffect(()=>{
+        window.scrollTo(0,0)
+      },[])
   
   return (
     <>

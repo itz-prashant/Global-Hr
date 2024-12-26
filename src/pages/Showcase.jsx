@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { IoMdGitCompare } from "react-icons/io";
 import { FaRandom, FaQuestionCircle } from "react-icons/fa";
 import { MdGroups } from "react-icons/md";
@@ -9,6 +9,11 @@ import cardData from '../utils/data';
 import CenterCard from '../components/centerCard';
 
 const Showcase = () => {
+
+  useEffect(()=>{
+      window.scrollTo(0,0)
+    },[])
+
   return (
     <>
       <div className="w-full mt-20 bg-cover bg-center sm:h-[80vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${showcaseBanner})`}}>
