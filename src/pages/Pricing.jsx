@@ -2,6 +2,8 @@ import React from 'react'
 import pricingBanner from '../assets/pricingBanner.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
+import PricingPlanCard from '../components/PricingPlanCard'
+import { pricingPlanDatas } from '../utils/data'
 
 const Pricing = () => {
   return (
@@ -17,6 +19,23 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+        <div className='max-w-7xl mx-auto md:w-full w-96 sm:w-[450px] flex flex-col gap-8 md:py-10 py-5'>
+          <h1 className='sm:text-3xl text-2xl text-black/65 text-center font-medium'>Packages for all startup sizes</h1>
+          <div className='flex md:flex-row flex-col gap-5 justify-between'>
+            <p className='text-black/70 md:w-1/2 w-full'>Global HR has created an affordable pricing model that reflects the size of your organisation. Our charges are transparent and based on the functions you wish to use as well as the number of staff you employ.</p>
+            <p className='text-black/70 md:w-1/2 w-full'>We also offer a free 30 days trial to make sure that you are confident in the system before you part with any money.</p>
+          </div>
+          <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1'>
+              {
+                pricingPlanDatas.map(data=>(
+                  <PricingPlanCard key={data.name} data={data}/>
+                ))
+              }
+          </div>
+        </div>
+      </section>   
     </>
   )
 }
