@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import pricingBanner from '../assets/pricingBanner.jpg'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 import PricingPlanCard from '../components/PricingPlanCard'
 import { pricingPlanDatas } from '../utils/data'
+import FreeTrailForm from '../components/FreeTrailForm'
 
 const Pricing = () => {
+
+  const [errorMessageBox, setErrorMessageBox] = useState(false)
+
   return (
     <>
       <div className="w-full mt-20 bg-cover bg-center sm:h-[80vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${pricingBanner})`}}>
@@ -35,7 +39,18 @@ const Pricing = () => {
               }
           </div>
         </div>
-      </section>   
+      </section>  
+
+      <section className='w-full p-10 flex items-center justify-center mb-10 mt-10'>
+        <div className='max-w-7xl mx-auto flex flex-col items-center gap-5'>
+          <h1 className='sm:text-3xl text-xl text-black/70 text-center font-medium'>Is Global HR right for your business?</h1>
+          <p className='text-xs md:mb-10 text-black/60 mb-3 text-center'>Contact us for a personalized tour.</p>
+              {errorMessageBox && <div className='bg-red-100 p-5 rounded w-fit'>
+            <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
+           </div>}
+              <FreeTrailForm background="blue" color={"black"} text="Send" direction="row" transparent="white" setErrorMessageBox={setErrorMessageBox}/>
+        </div>
+      </section> 
     </>
   )
 }

@@ -22,7 +22,7 @@ const Home = () => {
           {errorMessageBox && <div className='bg-red-100 p-5 rounded'>
           <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
           </div>}
-          <FreeTrailForm direction="row" transparent="white" background="yellow" setErrorMessageBox={setErrorMessageBox}/>
+          <FreeTrailForm direction="row" text="Start Free Trial" transparent="white" background="yellow" setErrorMessageBox={setErrorMessageBox}/>
         </div>
       </div>
       
@@ -102,7 +102,7 @@ const Home = () => {
               {errorMessageBox && <div className='bg-red-100 p-5 rounded w-fit'>
                 <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
               </div>}
-              <FreeTrailForm labelName="Name" labelEmail="Email Address" labelCompanyName="Company Name" background="blue" color="black"  direction="row" transparent="white" setErrorMessageBox={setErrorMessageBox}/>
+              <FreeTrailForm labelName="Name" labelEmail="Email Address" text="Start Free Trial" labelCompanyName="Company Name" background="blue" color="black"  direction="row" transparent="white" setErrorMessageBox={setErrorMessageBox}/>
             </div>
       </section>
     </>
