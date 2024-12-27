@@ -31,7 +31,7 @@ const Tour = () => {
         </div>
       </div>
 
-      <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
+      <section className='w-full sm:py-20 py-10 px-5 flex items-center justify-center'>
         <div className='max-w-7xl mx-auto md:w-full w-80 sm:w-[450px] flex flex-col md:flex-row gap-12 md:gap-8'>
             <div className='flex flex-row items-start gap-5'>
               <div className='text-[#045089]'><FaWandMagicSparkles size={32}/></div>
