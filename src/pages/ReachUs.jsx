@@ -2,12 +2,41 @@ import React, { useEffect, useState } from 'react'
 import { ImRoad } from "react-icons/im";
 import { IoIosLock } from "react-icons/io";
 import { FaHeadset } from "react-icons/fa6";
-
 import reachUs from '../assets/reachUsBanner.jpg'
 import MessageBox from '../components/MessageBox';
 import Button from '../components/Button';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'motion/react';
 
 const ReachUs = () => {
+
+  const controls = useAnimation();
+  
+    const [ref, inView] = useInView({
+      threshold: 0.28, 
+      triggerOnce: true, 
+    });
+  
+    useEffect(() => {
+      if (inView) {
+        controls.start('visible');
+      }
+    }, [inView, controls]);
+  
+    const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.3,
+        },
+      },
+    };
+  
+    const childVariantsRight = {
+      hidden: { opacity: 0, x: 100 }, 
+      visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+    };
 
     const [errorMessageBox, setErrorMessageBox] = useState(false)
 
@@ -97,29 +126,29 @@ const ReachUs = () => {
         <div className='max-w-7xl mx-auto flex flex-col gap-8'>
           <h1 className='sm:text-3xl text-xl text-black/60 text-center font-medium'>Contact Us Today</h1>
           <div className='flex md:flex-row flex-col items-center md:items-start md:justify-between gap-2 md:gap-6'>
-            <div className='flex flex-col gap-5 w-4/5 sm:w-1/2'>
-              <div className='flex flex-row items-start gap-4'>
+            <motion.div variants={containerVariants} ref={ref} initial="hidden" animate={controls} className='flex flex-col gap-5 w-4/5 sm:w-1/2'>
+              <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
                 <div className='text-[#045089] mt-2'><ImRoad size={32}/></div>
                 <div className='flex flex-col gap-2 text-black/60'>
                   <h3 className='text-2xl font-medium'>Your HR, your way</h3>
                   <p >The perfect fit for your growing organisation.</p>
                 </div>
-              </div>
-              <div className='flex flex-row items-start gap-4'>
+              </motion.div>
+              <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
                 <div className='text-[#045089] mt-2'><IoIosLock size={38}/></div>
                 <div className='flex flex-col gap-2 text-black/60'>
                   <h3 className='text-2xl font-medium'>Secure and reliable</h3>
                   <p >Gain total peace of mind with a single, secure storage place for all your HR documents.</p>
                 </div>
-              </div>
-              <div className='flex flex-row items-start gap-4'>
+              </motion.div>
+              <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
                 <div className='text-[#045089] mt-2'><FaHeadset size={36}/></div>
                 <div className='flex flex-col gap-2 text-black/60'>
                   <h3 className='text-2xl font-medium'>Excellent Support</h3>
                   <p >Align objectives and nurture talent to unlock the potential within your organisation.</p>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
             {
               !showBox ? <form onSubmit={handleForm} className="flex flex-col gap-3  justify-center w-4/5 sm:w-1/2">
 
