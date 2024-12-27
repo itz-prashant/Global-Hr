@@ -7,9 +7,38 @@ import Button from '../components/Button'
 import { Link } from 'react-router-dom'
 import cardData from '../utils/data';
 import CenterCard from '../components/centerCard';
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from 'motion/react';
 
 const Showcase = () => {
 
+  const controls = useAnimation();
+
+  const [ref, inView] = useInView({
+    threshold: 0.2, 
+    triggerOnce: true, 
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [inView, controls]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // Delay between children animations
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
   useEffect(()=>{
       window.scrollTo(0,0)
     },[])
@@ -31,36 +60,36 @@ const Showcase = () => {
           <div className='max-w-7xl mx-auto md:w-full w-96 sm:w-[450px] flex flex-col gap-4'>
               <h1 className='sm:text-3xl text-xl text-black/65 text-center font-medium'>Offering one stop HR solution for small and medium businesses.</h1>
               <p className='text-[15px] text-black/65 md:mb-10 mb-5 text-center'>Customize Global HR to suit your needs and reflect your brand.</p>
-              <div className='grid md:grid-cols-2 grid-cols-1 gap-5 justify-between'>
-              <div className='flex flex-row items-start gap-5'>
-                <div className='text-[#045089]'><IoMdGitCompare size={32}/></div>
+              <motion.div variants={containerVariants} ref={ref} initial="hidden" animate={controls} className='grid md:grid-cols-2 grid-cols-1 gap-5 justify-between'>
+                <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
+                  <div className='text-[#045089]'><IoMdGitCompare size={32}/></div>
                   <div className='flex flex-col gap-2'>
                       <h3 className='text-2xl font-medium text-black/70'>System Implementation</h3>
                       <p className=' text-black/70 text-sm'>Our experts will ensure People is up and running smoothly for your business from day one, so you can start making impact right away.</p>
                   </div>
-                </div>
-                <div className='flex flex-row items-start gap-5'>
+                </motion.div>
+                <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><FaRandom size={32}/></div>
                   <div className='flex flex-col gap-2'>
                     <h3 className='text-2xl font-medium text-black/70'>Free Switching Service</h3>
                     <p className='text-black/70 text-sm'>Our Free Switching Service makes it easy to migrate your HR data from your old system over to People, without any added hassle.</p>
                   </div>
-                </div>
-                <div className='flex flex-row items-start gap-5'>
+                </motion.div>
+                <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><MdGroups size={36}/></div>
                   <div className='flex flex-col gap-2'>
                       <h3 className='text-2xl font-medium text-black/70'>Online or On-Site Training</h3>
                       <p className=' text-black/70 text-sm'>If you want to get your whole workforce up to speed with People at the same time, our experts can deliver training for your workforce either online or on-site.</p>
                   </div>
-                </div>
-                <div className='flex flex-row items-start gap-5'>
+                </motion.div>
+                <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><FaQuestionCircle size={36}/></div>
                   <div className='flex flex-col gap-2'>
                     <h3 className='text-2xl font-medium text-black/70'>Full service support desk</h3>
                     <p className='text-black/70 text-sm'>Our office hours (9am – 5pm) make it easy to find instant help, even if you have offices outside the UK.</p>
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
           </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
