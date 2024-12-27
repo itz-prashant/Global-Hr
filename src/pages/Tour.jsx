@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
+import { useInView } from 'react-intersection-observer';
 import { FaWandMagicSparkles } from "react-icons/fa6";
 import { FaCogs } from "react-icons/fa";
 import tourBanner from '../assets/tourBanner.jpg'
@@ -10,8 +11,56 @@ import tourImg5 from '../assets/tour-img5.png'
 import atAGlance from '../assets/At-a-glance.png'
 import Button from '../components/Button'
 import { Link } from 'react-router-dom'
+import { motion, useAnimation } from 'motion/react';
+
+
+const ScrollSection = ({ children, threshold }) => {
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold, // Different threshold for each section
+    triggerOnce: true, // Trigger only once
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [inView, controls]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={controls}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Tour = () => {
+
+  const childVariantsRight = {
+    hidden: { opacity: 0, x: 100 }, 
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
+
+  const childVariantsLeft = {
+    hidden: { opacity: 0, x: -100 }, 
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
 
   useEffect(()=>{
     window.scrollTo(0,0)
@@ -19,7 +68,7 @@ const Tour = () => {
 
   return (
     <>
-      <div className="w-full mt-20 bg-cover bg-center md:h-[80vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${tourBanner})`}}>
+      <div className="w-full mt-20 bg-cover bg-center md:h-[90vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${tourBanner})`}}>
         <div className='max-w-7xl mx-auto w-full py-10 px-4 md:px-10 flex items-start'>
           <div className='md:w-[490px] lg:w-[550px] sm:w-80 w-60 flex flex-col gap-3 items-center'>
             <h1 className='md:text-5xl text-3xl text-white text-center'>Take a tour of Global HR.</h1>
@@ -62,21 +111,23 @@ const Tour = () => {
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
         <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2'>
-              <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
-              Save time, work smarter
-              </h3>
-              <p className=' text-black/70 text-sm'>
-                Global HR is a leading author of integrated business management software. We combine our innovative software with practical knowledge and experience to deliver you an HR & payroll solution that’s exactly right for your business and your people. 
-                <br />
-                <br />
-                There’s no need to start from scratch, our solutions offer standard functionality that has been developed over many years of best practice. Combined with powerful workflow tools and the ability to configure to your needs, HR solutions from Access deliver unparalleled results.
-                <br />
-                <br />
-                The People module is the powerhouse of your HR operations. It sits at the heart of your Global HR, providing everything needed to make HR management simpler and more effective.
-                <br />
-                <br />
-                With embedded workflow, automatic alerts, advanced security and easy configuration options, the system reflects our experience of working with companies, large and small, to design HR systems that really work.
-              </p>
+              <ScrollSection threshold={0.2}>
+                <motion.h3 variants={childVariantsRight} className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+                Save time, work smarter
+                </motion.h3>
+                <motion.p variants={childVariantsRight} className=' text-black/70 text-sm'>
+                  Global HR is a leading author of integrated business management software. We combine our innovative software with practical knowledge and experience to deliver you an HR & payroll solution that’s exactly right for your business and your people. 
+                  <br />
+                  <br />
+                  There’s no need to start from scratch, our solutions offer standard functionality that has been developed over many years of best practice. Combined with powerful workflow tools and the ability to configure to your needs, HR solutions from Access deliver unparalleled results.
+                  <br />
+                  <br />
+                  The People module is the powerhouse of your HR operations. It sits at the heart of your Global HR, providing everything needed to make HR management simpler and more effective.
+                  <br />
+                  <br />
+                  With embedded workflow, automatic alerts, advanced security and easy configuration options, the system reflects our experience of working with companies, large and small, to design HR systems that really work.
+                </motion.p>
+              </ScrollSection>  
             </div>
             <div className='w-1/2 flex justify-center items-start'>
               <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg1} alt="" />
@@ -89,21 +140,23 @@ const Tour = () => {
               <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg2} alt="" />
             </div>
             <div className='w-1/2'>
-              <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
-              Manage Absence/Holiday the Easy Way
-              </h3>
-              <p className=' text-white text-sm'>
-              Do you employ staff on a part-time basis? Do you provide flexible working, have staff on varying terms and conditions or working outside of the country?
-                <br />
-                <br />
-                There is a lot more to managing absence and holidays these days, but the good news is that Global HR can take care of the complexities and free up time and resource to facilitate strategic HR.
-                <br />
-                <br />
-                Global HR’s fully integrated absence module makes it simpler to manage absences, and generate the reports your business needs.
-                <br />
-                <br />
-                You’ll benefit from greater visibility over sicknesses, automatic calculation of holiday entitlements, smoother approval processes, automatic alerts and a host of other smart features that will save you time and put you in control.
-                </p>
+              <ScrollSection threshold={0.28}>
+                <motion.h3 variants={childVariantsLeft} className='sm:text-2xl text-xl font-medium text-white mb-3'>
+                Manage Absence/Holiday the Easy Way
+                </motion.h3>
+                <motion.p variants={childVariantsLeft} className=' text-white text-sm'>
+                Do you employ staff on a part-time basis? Do you provide flexible working, have staff on varying terms and conditions or working outside of the country?
+                  <br />
+                  <br />
+                  There is a lot more to managing absence and holidays these days, but the good news is that Global HR can take care of the complexities and free up time and resource to facilitate strategic HR.
+                  <br />
+                  <br />
+                  Global HR’s fully integrated absence module makes it simpler to manage absences, and generate the reports your business needs.
+                  <br />
+                  <br />
+                  You’ll benefit from greater visibility over sicknesses, automatic calculation of holiday entitlements, smoother approval processes, automatic alerts and a host of other smart features that will save you time and put you in control.
+                  </motion.p>
+                </ScrollSection>
             </div>
         </div>
       </section>
@@ -118,21 +171,23 @@ const Tour = () => {
       <section className='w-full sm:p-10 p-5 flex items-center bg-[#28a9e3] justify-center'>
         <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
             <div className='w-1/2'>
-              <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
-              Streamline performance reviews
-              </h3>
-              <p className=' text-white text-sm'>
-              When it comes to performance management, whether your employees have an annual appraisal, a regular assessment journal or participate in a 360˚ review , Global HR will facilitate the entire process enabling employees and their managers to record the details online.
-                <br />
-                <br />
-                With prompts for completion and integration with your competency frameworks and organisational goals Global HR will guide each person through the process and help manage outcomes that affect ongoing development or impact pay.
-                <br />
-                <br />
-                Easily manage any kind of performance review, from straight-forward yearly appraisals to multi-stage reviews throughout the year.
-                <br />
-                <br />
-                You’ll have the freedom to set up the forms you need – and choose who should be involved in each step of your process. It’s an integrated, easy-to-manage, and much more satisfying approach for all of your employees.
-                </p>
+              <ScrollSection threshold={0.5}>
+                <motion.h3 variants={childVariantsRight} className='sm:text-2xl text-xl font-medium text-white mb-3'>
+                Streamline performance reviews
+                </motion.h3>
+                <motion.p variants={childVariantsRight} className=' text-white text-sm'>
+                When it comes to performance management, whether your employees have an annual appraisal, a regular assessment journal or participate in a 360˚ review , Global HR will facilitate the entire process enabling employees and their managers to record the details online.
+                  <br />
+                  <br />
+                  With prompts for completion and integration with your competency frameworks and organisational goals Global HR will guide each person through the process and help manage outcomes that affect ongoing development or impact pay.
+                  <br />
+                  <br />
+                  Easily manage any kind of performance review, from straight-forward yearly appraisals to multi-stage reviews throughout the year.
+                  <br />
+                  <br />
+                  You’ll have the freedom to set up the forms you need – and choose who should be involved in each step of your process. It’s an integrated, easy-to-manage, and much more satisfying approach for all of your employees.
+                  </motion.p>
+                </ScrollSection>
             </div>
             <div className='w-1/2 flex justify-center items-start'>
               <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg3} alt="" />
@@ -145,15 +200,17 @@ const Tour = () => {
               <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg4} alt="" />
             </div>
             <div className='w-1/2'>
-              <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
-              Make time tracking a breeze
-              </h3>
-              <p className=' text-black/70 text-sm'>
-              For many organisations, timesheets are an essential business tool, helping to inform resourcing and drive billing. However, they can take up way too much of everyone’s time.
-                <br />
-                <br />
-                Global HR’s integrated Time module helps streamline every aspect of time recording, from set up and distribution of timesheets to authorisation and reporting.
-                </p>
+              <ScrollSection threshold={0.7}>
+                <motion.h3 variants={childVariantsLeft} className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+                Make time tracking a breeze
+                </motion.h3>
+                <motion.p variants={childVariantsLeft} className=' text-black/70 text-sm'>
+                For many organisations, timesheets are an essential business tool, helping to inform resourcing and drive billing. However, they can take up way too much of everyone’s time.
+                  <br />
+                  <br />
+                  Global HR’s integrated Time module helps streamline every aspect of time recording, from set up and distribution of timesheets to authorisation and reporting.
+                  </motion.p>
+              </ScrollSection>
             </div>
         </div>
       </section>
