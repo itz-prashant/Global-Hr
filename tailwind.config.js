@@ -8,6 +8,9 @@ export default {
     extend: {
       screens:{
         'xs': '480px'
+      },
+      fontFamily:{
+        lato:["Lato", "sans-serif"]
       }
     },
   },
