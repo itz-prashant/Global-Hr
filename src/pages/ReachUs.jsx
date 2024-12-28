@@ -124,7 +124,7 @@ const ReachUs = () => {
 
       <section className='w-full p-10 flex items-center justify-center'>
         <div className='max-w-7xl mx-auto flex flex-col gap-8'>
-          <h1 className='sm:text-3xl text-xl text-black/60 text-center font-medium'>Contact Us Today</h1>
+          <h1 className='sm:text-3xl text-2xl text-black/60 text-center font-medium'>Contact Us Today</h1>
           <div className='flex md:flex-row flex-col items-center md:items-start md:justify-between gap-2 md:gap-6'>
             <motion.div variants={containerVariants} ref={ref} initial="hidden" animate={controls} className='flex flex-col gap-5 w-4/5 sm:w-1/2'>
               <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
