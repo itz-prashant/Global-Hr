@@ -13,12 +13,12 @@ const PricingPlanCard = ({data}) => {
                 </div>
             </div>
             <div className='border-b lg:h-[490px] h-48 mt-4'>
-                <p className={`text-sm text-black/70 ${data.name == "Enterprise" ? "text-white" : "text-[#045089]"}`}>{data.description}</p>
+                <p className={`text-[12px] text-black/70 ${data.name == "Enterprise" ? "text-white" : "text-[#045089]"}`}>{data.description}</p>
             </div>
             <div className={`${data.name == "Enterprise" ? "text-white" : "text-black/70"}`}>
                 {
                     data.feature.map((feature,index)=>(
-                        <h6 key={index} className='border-b pb-4 pt-4'>{feature.f}</h6>
+                        <h6 key={index} className='border-b pb-4 pt-4 text[15px]'>{feature.f}</h6>
                     ))
                 }
             </div>
