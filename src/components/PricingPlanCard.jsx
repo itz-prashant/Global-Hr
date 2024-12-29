@@ -8,8 +8,8 @@ const PricingPlanCard = ({data}) => {
             <div className={`${data.name == "Enterprise" ? "text-white" : "text-[#045089]"}`}>
                 <h4 className='text-[33px] font-semibold'>{data.name}</h4>
                 <div className='flex items-baseline justify-center'>
-                    <h5 className='text-[33px] font-semibold'>{data.price}</h5>
-                    {data.price !== "Free" && <span className='text-sm'>/user/month</span>}
+                    <h5 className='text-[30px] font-semibold'>{data.price}</h5>
+                    {data.price !== "Free" && <span className='text-[12px]'>/user/month</span>}
                 </div>
             </div>
             <div className='border-b lg:h-[490px] h-48 mt-4'>

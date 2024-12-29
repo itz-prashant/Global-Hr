@@ -48,8 +48,8 @@ const Showcase = () => {
       <div className="w-full mt-20 bg-cover bg-center py-5 xs:h-[90vh] flex items-center justify-center" style={{backgroundImage: `url(${showcaseBanner})`}}>
         <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] py-10 px-4 md:px-10 flex items-center justify-center'>
           <div className='flex flex-col gap-3 items-center md:w-[600px] w-[450px]'>
-            <h1 className='text-[34px] xs:text-[56px] xs:text text-white text-center'>Global HR : Cloud based complete HR Solution</h1>
-            <p className='text-xl xs:text-[26px] text-white md:mb-10 mb-5 text-center'>Everything a company needs to manage its most important asset its Human Resource</p>
+            <h1 className='text-[34px] xs:text-[56px] text-white text-center leading-[95%]'>Global HR : Cloud based complete HR Solution</h1>
+            <p className='text-xl xs:text-[26px] text-white md:mb-10 mb-5 text-center leading-[95%]'>Everything a company needs to manage its most important asset its Human Resource</p>
             <Link to={"/showcase"}>
               <Button background={"blue"} text="Product Overview"/>
             </Link>
