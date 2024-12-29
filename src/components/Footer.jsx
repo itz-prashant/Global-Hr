@@ -8,8 +8,9 @@ const Footer = () => {
     <>
       <footer className='bg-[#292e31] w-full'>
 
-        <div className='bg-[#292e31] grid grid-cols-1 max-w-7xl w-[320px] sm:w-[430px] md:w-full mx-auto md:grid-cols-2 lg:grid-cols-4 md:p-10 p-5'>
-          <div className='flex flex-col flex-shrink gap-6 text-center md:p-8 p-5'>
+        <div className='bg-[#292e31] grid grid-cols-1 xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] md:grid-cols-2 mx-auto lg:grid-cols-4 px-[15px] md:px-0 py-14 gap-10 lg:gap-0'>
+
+          <div className='flex flex-col flex-shrink gap-6 text-center xl:w-[292px] lg:w-[242px] md:w-[345px] xs:w-[360px] w-[270px] px-[15px]'>
               <h1 className='text-center text-xl text-white pb-3 border-b-[0.5px] border-gray-600'>About Us</h1>
               <div>
                 <p className='text-white/65'>We’ve always believed that our competitors could never emulate the passion we have for our business and the fact that we only care about one thing; client satisfaction</p>
@@ -24,7 +25,7 @@ const Footer = () => {
               </div>
           </div>
 
-          <div className='flex flex-col flex-shrink gap-6 text-center md:p-8 p-5'>
+          <div className='flex flex-col flex-shrink gap-6 text-center xl:w-[292px] lg:w-[242px] md:w-[345px] xs:w-[360px] w-[270px] px-[15px]'>
               <h1 className='text-center text-xl text-white pb-3 border-b-[0.5px] border-gray-600'>Quick Links</h1>
               <nav>
                 <ul className='flex flex-col gap-4 text-white/65 text-sm'>
@@ -39,12 +40,12 @@ const Footer = () => {
               </nav>
           </div>
 
-          <div className='flex flex-col flex-shrink gap-6 md:p-8 p-5'>
+          <div className='flex flex-col flex-shrink gap-6 xl:w-[292px] lg:w-[242px] md:w-[345px] xs:w-[360px] w-[270px] px-[15px]'>
               <h1 className='text-center text-xl text-white pb-3 border-b-[0.5px] border-gray-600'>Free Trial Sign Up</h1>
               <FreeTrailForm labelName="Name" text="Start Free Trial" labelEmail="Email Address" labelCompanyName="Company Name" background="blue"  direction="col" transparent="transparent"/>
           </div>
 
-          <div className='flex flex-col flex-shrink gap-6 text-center md:p-8 p-4'>
+          <div className='flex flex-col flex-shrink gap-6 text-center xl:w-[292px] lg:w-[242px] md:w-[345px] xs:w-[360px] w-[270px] px-[15px]'>
               <h1 className='text-center text-xl text-white pb-3 border-b-[0.5px] border-gray-600'>Application</h1>
               <div>
                 <ul className='flex flex-col gap-4 text-white/65 text-sm'>
