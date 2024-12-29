@@ -35,10 +35,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full mt-20 bg-cover bg-center md:h-[90vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${banner1})`}}>
+      <div className="w-full mt-20 bg-cover bg-center md:h-[100vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${banner1})`}}>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] flex flex-col px-5 py-10 md:py-0 items-center sm:gap-5 gap-3'>
-          <motion.h1 variants={childVariants} className='xs:text-[56px] text-[34px] text-white text-center leading-[95%]'>Make HR Process Quick, Easy and Simple.</motion.h1>
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] flex flex-col px-5 py-20 md:py-0 items-center sm:gap-5 gap-3'>
+          <motion.h1 variants={childVariants} className='xs:text-[56px] text-[32px] text-white text-center leading-[95%]'>Make HR Process Quick, Easy and Simple.</motion.h1>
           <motion.p variants={childVariants} className='xs:text-[26px] text-[20px] text-white md:mb-14 mb-5 text-center'>HR Software for companies where people matter</motion.p>
           {errorMessageBox && <div className='bg-red-100 p-5 rounded'>
           <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
