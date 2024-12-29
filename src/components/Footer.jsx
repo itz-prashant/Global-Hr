@@ -40,8 +40,8 @@ const Footer = () => {
               </nav>
           </div>
 
-          <div className='flex flex-col flex-shrink gap-6 xl:w-[292px] lg:w-[242px] md:w-[345px] xs:w-[360px] w-[270px] px-[15px]'>
-              <h1 className='text-center text-xl text-white pb-3 border-b-[0.5px] border-gray-600'>Free Trial Sign Up</h1>
+          <div className='flex flex-col items-center flex-shrink gap-6 xl:w-[292px] lg:w-[242px] md:w-[345px] xs:w-[360px] w-[270px] px-[15px]'>
+              <h1 className='text-center text-xl w-full text-white pb-3 border-b-[0.5px] border-gray-600'>Free Trial Sign Up</h1>
               <FreeTrailForm labelName="Name" text="Start Free Trial" labelEmail="Email Address" labelCompanyName="Company Name" background="blue"  direction="col" transparent="transparent"/>
           </div>
 
