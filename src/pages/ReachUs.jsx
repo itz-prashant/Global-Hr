@@ -114,43 +114,43 @@ const ReachUs = () => {
   
   return (
     <>
-      <div className="w-full mt-20 bg-cover bg-center md:h-[80vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${reachUs})`}}>
-        <div className='max-w-7xl mx-auto w-full py-10 px-4 md:px-10 flex items-start'>
-          <div className='md:w-[490px] lg:w-[550px] sm:w-80 w-60 flex flex-col gap-3 items-center'>
-            <h1 className='md:text-5xl text-3xl text-white text-center'>Contact Us Today</h1>
+      <div className="w-full mt-20 bg-cover py-5 bg-center xs:h-[90vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${reachUs})`}}>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto py-10 px-4 md:px-10 flex items-start'>
+          <div className='md:w-[345px] lg:w-[455px] xl:w-[550px] xs:w-[360px] w-[270px] flex flex-col gap-3 items-center'>
+            <h1 className='text-[34px] xs:text-[44px] text-white text-center'>Contact Us Today</h1>
           </div>
         </div>
       </div>
 
       <section className='w-full p-10 flex items-center justify-center'>
-        <div className='max-w-7xl mx-auto flex flex-col gap-8'>
-          <h1 className='sm:text-3xl text-2xl text-black/60 text-center font-medium'>Contact Us Today</h1>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] p-4 mx-auto flex flex-col gap-8'>
+          <h1 className='text-[30px] text-black/70 text-center font-semibold'>Contact Us Today</h1>
           <div className='flex md:flex-row flex-col items-center md:items-start md:justify-between gap-2 md:gap-6'>
-            <motion.div variants={containerVariants} ref={ref} initial="hidden" animate={controls} className='flex flex-col gap-5 w-4/5 sm:w-1/2'>
+            <motion.div variants={containerVariants} ref={ref} initial="hidden" animate={controls} className='flex flex-col gap-5 md:w-[345px] lg:w-[455px] xl:w-[550px] xs:w-[360px] w-[270px]'>
               <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
-                <div className='text-[#045089] mt-2'><ImRoad size={32}/></div>
-                <div className='flex flex-col gap-2 text-black/60'>
-                  <h3 className='text-2xl font-medium'>Your HR, your way</h3>
+                <div className='text-[#045089] mt-2  text-[36px]'><ImRoad/></div>
+                <div className='flex flex-col gap-2 text-black/65'>
+                  <h3 className='text-[22px] font-semibold'>Your HR, your way</h3>
                   <p >The perfect fit for your growing organisation.</p>
                 </div>
               </motion.div>
               <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
-                <div className='text-[#045089] mt-2'><IoIosLock size={38}/></div>
-                <div className='flex flex-col gap-2 text-black/60'>
-                  <h3 className='text-2xl font-medium'>Secure and reliable</h3>
+                <div className='text-[#045089] mt-2 text-[36px]'><IoIosLock /></div>
+                <div className='flex flex-col gap-2 text-black/65'>
+                  <h3 className='text-[22px] font-semibold'>Secure and reliable</h3>
                   <p >Gain total peace of mind with a single, secure storage place for all your HR documents.</p>
                 </div>
               </motion.div>
               <motion.div variants={childVariantsRight} className='flex flex-row items-start gap-4'>
-                <div className='text-[#045089] mt-2'><FaHeadset size={36}/></div>
-                <div className='flex flex-col gap-2 text-black/60'>
-                  <h3 className='text-2xl font-medium'>Excellent Support</h3>
+                <div className='text-[#045089] mt-2 text-[36px]'><FaHeadset /></div>
+                <div className='flex flex-col gap-2 text-black/65'>
+                  <h3 className='text-[22px] font-semibold'>Excellent Support</h3>
                   <p >Align objectives and nurture talent to unlock the potential within your organisation.</p>
                 </div>
               </motion.div>
             </motion.div>
             {
-              !showBox ? <form onSubmit={handleForm} className="flex flex-col gap-3  justify-center w-4/5 sm:w-1/2">
+              !showBox ? <form onSubmit={handleForm} className="flex flex-col gap-3  justify-center md:w-[345px] lg:w-[455px] xl:w-[550px] xs:w-[360px] w-[270px] mt-4 md:mt-0">
 
               {errorMessageBox && <div className='bg-red-100 p-5 rounded'>
                 <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
