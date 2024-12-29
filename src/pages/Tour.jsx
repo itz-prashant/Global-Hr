@@ -68,11 +68,11 @@ const Tour = () => {
 
   return (
     <>
-      <div className="w-full mt-20 bg-cover bg-center md:h-[90vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${tourBanner})`}}>
-        <div className='max-w-7xl mx-auto w-full py-10 px-4 md:px-10 flex items-start'>
-          <div className='md:w-[490px] lg:w-[550px] sm:w-80 w-60 flex flex-col gap-3 items-center'>
-            <h1 className='md:text-5xl text-3xl text-white text-center'>Take a tour of Global HR.</h1>
-            <p className='sm:text-xl md:text-2xl text-white md:mb-10 mb-5 text-center'>Check out or easy to use HR software features for yourself!</p>
+      <div className="w-full mt-20 bg-cover py-5 bg-center xs:h-[90vh] h-full flex items-center justify-center" style={{backgroundImage: `url(${tourBanner})`}}>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] py-10 px-4 md:px-10 flex items-start'>
+          <div className='md:w-[345px] lg:w-[455px] xl:w-[550px] xs:w-[360px] w-[270px] flex flex-col gap-3 items-center'>
+            <h1 className='text-[34px] xs:text-[44px] text-white text-center'>Take a tour of Global HR.</h1>
+            <p className='text-[22px] text-white md:mb-10 mb-5 text-center'>Check out or easy to use HR software features for yourself!</p>
             <Link to={"/tour"}>
               <Button background={"blue"} text="Take a tour"/>
             </Link>
@@ -81,19 +81,19 @@ const Tour = () => {
       </div>
 
       <section className='w-full sm:py-20 py-10 px-5 flex items-center justify-center'>
-        <div className='max-w-7xl mx-auto md:w-full w-80 sm:w-[450px] flex flex-col md:flex-row gap-12 md:gap-8'>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] flex flex-col md:flex-row gap-12 md:gap-8'>
             <div className='flex flex-row items-start gap-5'>
               <div className='text-[#045089]'><FaWandMagicSparkles size={32}/></div>
               <div className='flex flex-col gap-2'>
                 <h3 className='text-2xl font-medium text-black/70'>Access Anytime Anywhere</h3>
-                <p className=' text-black/70 text-sm'>Because Global HR is hosted online, you and your employees can access Global HR 24/7 via a PC, Mac, tablet, smartphone or our dedicated iPhone app.</p>
+                <p className=' text-black/70 text-[15px]'>Because Global HR is hosted online, you and your employees can access Global HR 24/7 via a PC, Mac, tablet, smartphone or our dedicated iPhone app.</p>
               </div>
             </div>
             <div className='flex flex-row items-start gap-5'>
               <div className='text-[#045089]'><FaCogs size={36}/></div>
               <div className='flex flex-col gap-2'>
                 <h3 className='text-2xl font-medium text-black/70'>Its Flexible</h3>
-                <p className='text-black/70 text-sm'>Build an HR system that meets your needs by customising pages, fields, approval process, work patterns, forms, performance reviews, reports and more.</p>
+                <p className='text-black/70 text-[15px]'>Build an HR system that meets your needs by customising pages, fields, approval process, work patterns, forms, performance reviews, reports and more.</p>
               </div>
             </div>
         </div>
@@ -109,13 +109,13 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
-            <div className='w-1/2'>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14 p-4'>
+            <div className='md:w-[60%]'>
               <ScrollSection threshold={0.2}>
-                <motion.h3 variants={childVariantsRight} className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+                <motion.h3 variants={childVariantsRight} className='text-[28px] font-semibold text-black/70 mb-3 leading-[95%]'>
                 Save time, work smarter
                 </motion.h3>
-                <motion.p variants={childVariantsRight} className=' text-black/70 text-sm'>
+                <motion.p variants={childVariantsRight} className=' text-black/70 text-[15px]'>
                   Global HR is a leading author of integrated business management software. We combine our innovative software with practical knowledge and experience to deliver you an HR & payroll solution that’s exactly right for your business and your people. 
                   <br />
                   <br />
@@ -129,22 +129,22 @@ const Tour = () => {
                 </motion.p>
               </ScrollSection>  
             </div>
-            <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg1} alt="" />
+            <div className='flex md:w-[40%] justify-center flex-shrink-0 items-start'>
+              <img className='w-[270px] xs:w-[360px] md:w-[390px] lg:w-[455px] xl:w-[555px]' src={tourImg1} alt="" />
             </div>
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 bg-[#f2672e] flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14'>
-            <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg2} alt="" />
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14 p-4'>
+            <div className='md:w-[40%] flex-shrink-0 flex justify-center items-start'>
+              <img className='w-[270px] xs:w-[360px] md:w-[390px] lg:w-[455px] xl:w-[555px]' src={tourImg2} alt="" />
             </div>
-            <div className='w-1/2'>
+            <div className='md:w-[60%]'>
               <ScrollSection threshold={0.28}>
-                <motion.h3 variants={childVariantsLeft} className='sm:text-2xl text-xl font-medium text-white mb-3'>
+                <motion.h3 variants={childVariantsLeft} className='text-[28px] leading-[95%] font-semibold text-white mb-3'>
                 Manage Absence/Holiday the Easy Way
                 </motion.h3>
-                <motion.p variants={childVariantsLeft} className=' text-white text-sm'>
+                <motion.p variants={childVariantsLeft} className=' text-white text-[15px]'>
                 Do you employ staff on a part-time basis? Do you provide flexible working, have staff on varying terms and conditions or working outside of the country?
                   <br />
                   <br />
@@ -161,21 +161,21 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
-        <div className='max-w-7xl mx-auto flex md:flex-row flex-col items-center justify-between gap-4'>
-          <h1 className='text-[#045089] md:text-2xl text-xl text-center font-medium'>Is Global HR right for your Organisation? Buy it now.</h1>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto flex md:flex-row flex-col items-center justify-center gap-4'>
+          <h1 className='text-[#045089] text-[22px] text-center font-semibold'>Is Global HR right for your Organisation? Buy it now.</h1>
           <Link to={"/pricing-plan"}>
             <button className='py-2 px-10 border border-[#045089] text-[#045089] rounded-full text-lg hover:bg-[#045089] hover:text-white transition-all duration-500'>Pricing</button>
           </Link>
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center bg-[#28a9e3] justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
-            <div className='w-1/2'>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14 p-4'>
+            <div className='md:w-[60%]'>
               <ScrollSection threshold={0.5}>
-                <motion.h3 variants={childVariantsRight} className='sm:text-2xl text-xl font-medium text-white mb-3'>
+                <motion.h3 variants={childVariantsRight} className='text-[28px] leading-[95%] font-semibold text-white mb-3'>
                 Streamline performance reviews
                 </motion.h3>
-                <motion.p variants={childVariantsRight} className=' text-white text-sm'>
+                <motion.p variants={childVariantsRight} className=' text-white text-[15px]'>
                 When it comes to performance management, whether your employees have an annual appraisal, a regular assessment journal or participate in a 360˚ review , Global HR will facilitate the entire process enabling employees and their managers to record the details online.
                   <br />
                   <br />
@@ -189,22 +189,22 @@ const Tour = () => {
                   </motion.p>
                 </ScrollSection>
             </div>
-            <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg3} alt="" />
+            <div className='md:w-[40%] flex flex-shrink-0 justify-center items-start'>
+              <img className='w-[270px] xs:w-[360px] md:w-[390px] lg:w-[455px] xl:w-[555px]' src={tourImg3} alt="" />
             </div>
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14'>
-            <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg4} alt="" />
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14 p-4'>
+            <div className='md:w-[40%] flex flex-shrink-0 justify-center items-start'>
+              <img className='w-[270px] xs:w-[360px] md:w-[390px] lg:w-[455px] xl:w-[555px]' src={tourImg4} alt="" />
             </div>
-            <div className='w-1/2'>
+            <div className='md:w-[60%]'>
               <ScrollSection threshold={0.7}>
-                <motion.h3 variants={childVariantsLeft} className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+                <motion.h3 variants={childVariantsLeft} className='text-[28px] leading-[95%] font-semibold text-black/70 mb-3'>
                 Make time tracking a breeze
                 </motion.h3>
-                <motion.p variants={childVariantsLeft} className=' text-black/70 text-sm'>
+                <motion.p variants={childVariantsLeft} className=' text-black/70 text-[15px]'>
                 For many organisations, timesheets are an essential business tool, helping to inform resourcing and drive billing. However, they can take up way too much of everyone’s time.
                   <br />
                   <br />
@@ -215,33 +215,33 @@ const Tour = () => {
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center bg-[#28b779] justify-center'>
-        <div className='max-w-7xl md:w-full w-[600px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14'>
-            <div className='w-1/2'>
-              <h3 className='sm:text-2xl text-xl font-medium text-white mb-3'>
+        <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] mx-auto flex md:flex-row flex-col items-center md:items-start md:justify-between gap-8 md:gap-14 p-4'>
+            <div className='md:w-[60%]'>
+              <h3 className='text-[28px] leading-[95%] font-semibold text-white mb-3'>
               Improve Recruitment
               </h3>
-              <p className=' text-white text-sm'>
+              <p className=' text-white text-[15px]'>
               In-recruiting helps support your complete recruitment process, from posting the latest job vacancies, through applicant tracking, to making the final job offer.
                 <br />
                 <br />
                 It connects you to the leading free job boards, helps you capitalise on social media, and streamlines candidate selection, so you can find the people you need faster and more effectively.
               </p>
             </div>
-            <div className='w-1/2 flex justify-center items-start'>
-              <img className='w-[360px] md:w-[420px] lg:w-[470px]' src={tourImg5} alt="" />
+            <div className='md:w-[40%] flex flex-shrink-0 justify-center items-start'>
+              <img className='w-[270px] xs:w-[360px] md:w-[390px] lg:w-[455px] xl:w-[555px]' src={tourImg5} alt="" />
             </div>
         </div>
       </section>
       <section className='w-full sm:p-10 p-5 flex items-center justify-center'>
-        <div className='max-w-7xl md:w-full w-[450px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14'>
-            <div className='flex justify-center items-start'>
-              <img className='w-60 md:w-72 lg:w-[470px]' src={atAGlance} alt="" />
+        <div className='max-w-7xl md:w-full w-[450px] mx-auto flex md:flex-row flex-col-reverse items-center md:items-start md:justify-between gap-8 md:gap-14 p-4'>
+            <div className='md:w-[40%] flex flex-shrink-0 justify-center items-start'>
+              <img className='w-[270px] xs:w-[290px] md:w-[220px] lg:w-[220px]' src={atAGlance} alt="" />
             </div>
-            <div className='flex flex-grow flex-col'>
-              <h3 className='sm:text-2xl text-xl font-medium text-black/70 mb-3'>
+            <div className='md:w-[60%] flex flex-grow flex-col'>
+              <h3 className='text-[28px] leading-[95%] font-semibold text-black/70 mb-3'>
               At a glance
               </h3>
-              <p className='text-black/70 text-sm'>
+              <p className='text-black/70 text-[15px]'>
               Global HR solutions support every aspect of your HR strategy from recruitment and on boarding right through to leaves, attendance, talent, payment and reward. Unite, integrate and optimise all of your people processes and maximise the success of your employees.
                 <br />
                 <br />
