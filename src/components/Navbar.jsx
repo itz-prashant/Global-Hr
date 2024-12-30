@@ -24,7 +24,7 @@ const Navbar = () => {
         </nav>
         <IoMenu size={32} onClick={()=> setHandleMenu(!handelMenu)} className='md:hidden text-gray-500 cursor-pointer'/>
       </div>
-      <nav className={`${handelMenu ? "h-[350px]" : "h-0"} transition-all duration-500 mt-20 w-full z-[1000]`}>
+      <nav className={`${handelMenu ? "h-[350px]" : "h-0"} md:hidden transition-all duration-500 mt-20 w-full z-[1000]`}>
         <ul className={`flex flex-col gap-6 text-black/80 w-[300px] xs:w-[390] mx-auto text-sm py-4  ${handelMenu ? "" : "invisible"}`}>
             <Link to={"/"} onClick={()=>setHandleMenu(false)} className='hover:text-blue-600'>Home</Link>
             <Link to={"/tour"} onClick={()=>setHandleMenu(false)} className='hover:text-blue-600'>Tour</Link>
