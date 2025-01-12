@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "motion/react"
 import { FaChartPie, FaStar, FaRegLightbulb, FaRegChartBar} from "react-icons/fa";
+import { TbChartGridDots } from "react-icons/tb";
 import { ImRoad } from "react-icons/im";
 import { IoIosLock } from "react-icons/io";
 import banner1 from '../assets/banner1.jpg'
@@ -39,7 +40,7 @@ const Home = () => {
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] flex flex-col px-5 py-20 md:py-0 items-center sm:gap-5 gap-3'>
           <motion.h1 variants={childVariants} className='xs:text-[56px] text-[32px] text-white text-center leading-[95%]'>Make HR Process Quick, Easy and Simple.</motion.h1>
-          <motion.p variants={childVariants} className='xs:text-[26px] text-[20px] text-white md:mb-14 mb-5 text-center'>HR Software for companies where people matter</motion.p>
+          <motion.p variants={childVariants} className='xs:text-[26px] text-[20px] text-white md:mb-32 mb-5 text-center'>HR Software for companies where people matter</motion.p>
           {errorMessageBox && <div className='bg-red-100 p-5 rounded'>
           <p className='text-red-600 text-xs text-center'>There was a problem with your submission. Errors are marked below. </p>
           </div>}
@@ -93,7 +94,7 @@ const Home = () => {
             </div>
             <div className='flex flex-col gap-8 lg:w-[485px] md:w-[375px] w-full'>
                 <div className='flex flex-row items-start gap-4'>
-                  <div className='text-white mt-2 text-[38px]'><FaRegChartBar/></div>
+                  <div className='text-white mt-2 text-[38px]'><TbChartGridDots/></div>
                   <div className='flex flex-col gap-2 text-white'>
                     <h3 className='text-[22px] font-semibold'>Full reporting and visibilit</h3>
                     <p className='text-[15px]'>All the analysis tools you’ll need to better nurture and align talent with business needs.</p>
