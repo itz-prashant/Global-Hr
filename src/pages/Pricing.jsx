@@ -42,6 +42,13 @@ const Pricing = () => {
                 ))
               }
           </div>
+          <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 -mt-5'>
+              {
+                pricingPlanDatas.map(data=>(
+                  <div key={data.name} className={`${data.name == "Enterprise" ? "h-[20px] bg-[#045089] border-l border-r" : "h-[22px] bg-white border-t"}`}></div>
+                ))
+              }
+          </div>
         </div>
       </section>  
 
