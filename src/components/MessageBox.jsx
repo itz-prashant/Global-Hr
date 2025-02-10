@@ -1,9 +1,8 @@
-import React from 'react'
 
 const MessageBox = () => {
   return (
-    <div className='bg-green-100 p-5 rounded'>
-        <p className='text-green-600 text-sm'>Thank you for your request. Our support team will get back to you soon.</p>
+    <div className='bg-[#DFF0D8] p-5 rounded'>
+        <p style={{ textShadow: "0 0 10px rgba(0, 0, 0, 0.5)" }} className='text-[#468847] text-sm'>Thank you for your request. Our support team will get back to you soon.</p>
     </div>
   )
 }

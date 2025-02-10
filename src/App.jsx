@@ -19,8 +19,8 @@ function App() {
     <>
       <div className="relative font-lato">
         <div className='fixed flex flex-col gap-3 right-0 top-1/2 -translate-y-1/2'>
-          <Link to={"https://globalhruk.com/globalhr/"}><img  className="w-[32px]" src={logIn} alt="" /></Link>
-          <Link to={"https://globalhruk.com/globalhr/index.php/login/user_registration_c/index"}><img  className="w-[32px]" src={register} alt="" /></Link>
+          <Link to={"https://globalhruk.com/globalhr/"}><img  className="w-[32px] h-[101px]"  src={logIn} alt="" /></Link>
+          <Link to={"https://globalhruk.com/globalhr/index.php/login/user_registration_c/index"}><img  className="w-[32px] h-[101px]" src={register} alt="" /></Link>
         </div>
         <Navbar />
         <Routes>

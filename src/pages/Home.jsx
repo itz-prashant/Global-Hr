@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from "motion/react"
-import { FaChartPie, FaStar, FaRegLightbulb, FaRegChartBar} from "react-icons/fa";
+import { FaChartPie, FaStar, FaRegLightbulb} from "react-icons/fa";
 import { TbChartGridDots } from "react-icons/tb";
 import { ImRoad } from "react-icons/im";
 import { IoIosLock } from "react-icons/io";

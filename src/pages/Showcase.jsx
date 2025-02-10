@@ -47,8 +47,8 @@ const Showcase = () => {
     <>
       <div className="w-full mt-20 bg-cover bg-center py-5 xs:h-[90vh] flex items-center justify-center" style={{backgroundImage: `url(${showcaseBanner})`}}>
         <div className='xl:w-[1140px] md:w-[720px] lg:w-[940px] w-[300px] xs:w-[390px] py-10 px-4 md:px-10 flex items-center justify-center'>
-          <div className='flex flex-col gap-3 items-center md:w-[600px] w-[450px]'>
-            <h1 className='text-[34px] xs:text-[56px] text-white text-center leading-[95%]'>Global HR : Cloud based complete HR Solution</h1>
+          <div className='flex flex-col gap-3 sm:gap-5 items-center md:w-[600px] w-[450px]'>
+            <h1 className='text-[34px] xs:text-[56px] text-white text-center leading-[98%]'>Global HR : Cloud based complete HR Solution</h1>
             <p className='text-xl xs:text-[26px] text-white md:mb-10 mb-5 text-center leading-[95%]'>Everything a company needs to manage its most important asset its Human Resource</p>
             <Link to={"/showcase"}>
               <Button background={"blue"} text="Product Overview"/>
@@ -64,28 +64,28 @@ const Showcase = () => {
                 <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><IoMdGitCompare size={32}/></div>
                   <div className='flex flex-col gap-2'>
-                      <h3 className='text-[22px] font-medium text-black/70'>System Implementation</h3>
+                      <h3 className='text-[22px] font-bold text-black/70'>System Implementation</h3>
                       <p className=' text-black/70 text-[15px]'>Our experts will ensure People is up and running smoothly for your business from day one, so you can start making impact right away.</p>
                   </div>
                 </motion.div>
                 <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><FaRandom size={32}/></div>
                   <div className='flex flex-col gap-2'>
-                    <h3 className='text-[22px] font-medium text-black/70'>Free Switching Service</h3>
+                    <h3 className='text-[22px] font-bold text-black/70'>Free Switching Service</h3>
                     <p className='text-black/70 text-[15px]'>Our Free Switching Service makes it easy to migrate your HR data from your old system over to People, without any added hassle.</p>
                   </div>
                 </motion.div>
                 <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><MdGroups size={36}/></div>
                   <div className='flex flex-col gap-2'>
-                      <h3 className='text-[22px] font-medium text-black/70'>Online or On-Site Training</h3>
+                      <h3 className='text-[22px] font-bold text-black/70'>Online or On-Site Training</h3>
                       <p className=' text-black/70 text-[15px]'>If you want to get your whole workforce up to speed with People at the same time, our experts can deliver training for your workforce either online or on-site.</p>
                   </div>
                 </motion.div>
                 <motion.div variants={childVariants} className='flex flex-row items-start gap-5'>
                   <div className='text-[#045089]'><FaQuestionCircle size={36}/></div>
                   <div className='flex flex-col gap-2'>
-                    <h3 className='text-[22px] font-medium text-black/70'>Full service support desk</h3>
+                    <h3 className='text-[22px] font-bold text-black/70'>Full service support desk</h3>
                     <p className='text-black/70 text-[15px]'>Our office hours (9am – 5pm) make it easy to find instant help, even if you have offices outside the UK.</p>
                   </div>
                 </motion.div>
